@@ -56,7 +56,8 @@ class Button extends StatelessWidget {
             text,
             style: TextStyle(
               fontSize: textSize,
-              color: TextColor
+              color: TextColor,
+
             ),
             
           ),

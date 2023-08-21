@@ -2,6 +2,7 @@ import 'package:calculator_app/util/colors.dart';
 import 'package:calculator_app/util/dimention.dart';
 import 'package:calculator_app/widget/button.dart';
 import 'package:calculator_app/widget/display_screen.dart';
+import 'package:calculator_app/widget/equalButton.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -60,6 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             ),
             Expanded(child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
@@ -153,60 +155,45 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Button(text: '7',
                       callBack: btnOnClick,
-
                     ),
                     Button(text: '8',
                       callBack: btnOnClick,
                       TextColor: Colors.white,
-
-                    ),Button(text: '9',
-                      callBack: btnOnClick,
-
                     ),
-                    Button(text: '=',
+                    Button(text: '9',
+                      callBack: btnOnClick,
+                    ),
+                    Button(text: '',
                       callBack: btnOnClick,
                       TextColor: Colors.white,
-
+                      textSize: Dimenstions.height25,
                     ),
                   ],
                 ),
-                //SizedBox(
-                //  width: Dimenstions.width20,
-                //),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Button(text: '0',
                       callBack: btnOnClick,
-
                     ),
-                    //SizedBox(
-                    //  width: Dimenstions.width20,
-                    //),
                     Button(text: '00',
                       callBack: btnOnClick,
                       TextColor: Colors.white,
-
                     ),
                     Button(text: '.',
                       callBack: btnOnClick,
                       TextColor: Colors.white,
-
                     ),
-                    //SizedBox(
-                    //  width: Dimenstions.width20,
-                    //),
-                    Button(text: '=',
+                    EqualButton(text: '=',
                       callBack: btnOnClick,
                       TextColor: Colors.white,
-
-                    ),
-
+                    )
                   ],
                 ),
 
