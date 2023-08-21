@@ -26,7 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Column(
           children: [
-            DisplayScreen()
+            const DisplayScreen(),
+            SizedBox(
+              height: Dimenstions.height25,
+
+            ),
+            Expanded(child: Column(
+              children: [
+                
+              ],
+            )
           ],
         ),
       )
