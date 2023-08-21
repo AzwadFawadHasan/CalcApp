@@ -33,14 +33,28 @@ class _HomeScreenState extends State<HomeScreen> {
 
             ),
             Expanded(child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Button(),
-                Button()
+                Button(text: 'A/C',
+                      callBack: btnOnClick,
+
+                ),
+                Button(text: 'C',
+                  callBack: btnOnClick,
+                  TextColor: Colors.red,
+
+                ),Button(text: '%',
+                  callBack: btnOnClick,
+
+                ),
               ],
             ))
           ],
         ),
       )
     );
+  }
+  void btnOnClick(text){
+    print(text);
   }
 }

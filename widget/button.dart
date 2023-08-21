@@ -3,13 +3,20 @@ import '../util/colors.dart';
 import '../util/dimention.dart';
 
 class Button extends StatelessWidget {
-  const Button({super.key});
+
+  final String text;
+  final Color TextColor;
+  final double textSize;
+  final Function callBack;
+
+  const Button({super.key, required this.text,  this.TextColor = Colors.white,  this.textSize=25, required this.callBack});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        print("button has been tapped");
+        callBack(text);
+        print("button has been tapped ${text}");
       },
       child: Container(
         height: Dimenstions.height75,
@@ -44,12 +51,12 @@ class Button extends StatelessWidget {
             ]
           )
         ),
-        child: const Center(
+        child:  Center(
           child: Text(
-            '1',
+            text,
             style: TextStyle(
-              fontSize: 25,
-              color: Colors.white
+              fontSize: textSize,
+              color: TextColor
             ),
             
           ),
