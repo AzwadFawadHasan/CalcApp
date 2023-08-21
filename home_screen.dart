@@ -11,11 +11,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text(
-        "Hello World",
-        style: TextStyle(
-          fontSize: 30,
-          color: Colors.black,
+      body: Center(
+        child: Text(
+          "Hello World",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.black,
+          ),
         ),
       ),
     );
