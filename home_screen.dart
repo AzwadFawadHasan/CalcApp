@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: AppColor.BackgroundColor,
+      backgroundColor: AppColor.BackgroundColorLighter,
         appBar: AppBar(
           title: Text(
             'Calculator', // App title
@@ -41,10 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body:Padding(
         padding: EdgeInsets.only(
 
-          top: Dimenstions.height10,
-          bottom: Dimenstions.height10,
-          left: Dimenstions.width20,
-          right: Dimenstions.width20,
+          //top: Dimenstions.height10,
+          //bottom: Dimenstions.height10,
+          //left: Dimenstions.width20,
+          //right: Dimenstions.width20,
 
 
         ),
@@ -65,21 +65,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Button(text: 'A/C',
+                    Button(text: 'V',
                           callBack: btnOnClick,
 
                     ),
                     Button(text: 'C',
                       callBack: btnOnClick,
-                      TextColor: Colors.red,
+                      TextColor: Colors.white,
 
-                    ),Button(text: '%',
+                    ),Button(text: 'X',
                       callBack: btnOnClick,
 
                     ),
                     Button(text: '/',
                       callBack: btnOnClick,
-                      TextColor: AppColor.TextColorlight,
+                      TextColor: Colors.white,
 
                     ),
                   ],
@@ -88,43 +88,66 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Button(text: '9',
+                    Button(text: '(',
                       callBack: btnOnClick,
 
                     ),
-                    Button(text: '8',
+                    Button(text: ')',
                       callBack: btnOnClick,
-                      TextColor: Colors.red,
+                      TextColor: Colors.white,
 
-                    ),Button(text: '7',
+                    ),Button(text: '%',
                       callBack: btnOnClick,
 
                     ),
-                    Button(text: 'X',
+                    Button(text: '*',
                       callBack: btnOnClick,
-                      TextColor: AppColor.TextColorlight,
+                      TextColor: Colors.white,
 
                     ),
                   ],
                 ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Button(text: '6',
+                    Button(text: '1',
                       callBack: btnOnClick,
 
                     ),
-                    Button(text: '5',
+                    Button(text: '2',
                       callBack: btnOnClick,
-                      TextColor: Colors.red,
+                      TextColor: Colors.white,
 
-                    ),Button(text: '4',
+                    ),Button(text: '3',
                       callBack: btnOnClick,
 
                     ),
                     Button(text: '-',
                       callBack: btnOnClick,
-                      TextColor: AppColor.TextColorlight,
+                      TextColor: Colors.white,
+
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Button(text: '4',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: '5',
+                      callBack: btnOnClick,
+                      TextColor: Colors.white,
+
+                    ),Button(text: '6',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: '+',
+                      callBack: btnOnClick,
+                      TextColor: Colors.white,
                       textSize: Dimenstions.height25,
 
                     ),
@@ -133,47 +156,54 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Button(text: '3',
+                    Button(text: '7',
                       callBack: btnOnClick,
 
                     ),
-                    Button(text: '2',
+                    Button(text: '8',
                       callBack: btnOnClick,
-                      TextColor: Colors.red,
+                      TextColor: Colors.white,
 
-                    ),Button(text: '1',
+                    ),Button(text: '9',
                       callBack: btnOnClick,
 
                     ),
-                    Button(text: '+',
+                    Button(text: '=',
                       callBack: btnOnClick,
-                      TextColor: AppColor.TextColorlight,
+                      TextColor: Colors.white,
 
                     ),
                   ],
                 ),
-                SizedBox(
-                  width: Dimenstions.width20,
-                ),
+                //SizedBox(
+                //  width: Dimenstions.width20,
+                //),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Button(text: '0',
                       callBack: btnOnClick,
 
                     ),
-                    SizedBox(
-                      width: Dimenstions.width20,
+                    //SizedBox(
+                    //  width: Dimenstions.width20,
+                    //),
+                    Button(text: '00',
+                      callBack: btnOnClick,
+                      TextColor: Colors.white,
+
                     ),
                     Button(text: '.',
                       callBack: btnOnClick,
-                      TextColor: Colors.red,
+                      TextColor: Colors.white,
 
                     ),
-                    SizedBox(
-                      width: Dimenstions.width20,
-                    ),Button(text: '=',
+                    //SizedBox(
+                    //  width: Dimenstions.width20,
+                    //),
+                    Button(text: '=',
                       callBack: btnOnClick,
+                      TextColor: Colors.white,
 
                     ),
 

@@ -19,24 +19,24 @@ class Button extends StatelessWidget {
         print("button has been tapped ${text}");
       },
       child: Container(
-        height: Dimenstions.height75,
+        height: Dimenstions.height50,
         width: Dimenstions.height75,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(Dimenstions.Radius25),
-          color: AppColor.BackgroundColor,
+          borderRadius: BorderRadius.zero,
+          color: AppColor.BackgroundColorLighter,
           boxShadow: const[
             BoxShadow(
-              color: Colors.white10,
-              offset: Offset(-2, -2),
-              blurRadius: 9,
-              spreadRadius: 1,
+              color: Color(0xFF0b354e),
+              //offset: Offset(-2, -2),
+              //blurRadius: 9,
+              //spreadRadius: 1,
 
             ),
             BoxShadow(
-              color: Colors.black87,
-              offset: Offset(2, 2),
-              blurRadius: 9,
-              spreadRadius: 1,
+              color: Color(0xFF0b354e),
+              //offset: Offset(2, 2),
+              //blurRadius: 9,
+             // spreadRadius: 1,
 
             )
           ],
@@ -44,8 +44,8 @@ class Button extends StatelessWidget {
             begin: Alignment.topLeft,
             end:Alignment.bottomRight,
             colors: [
-              Color(0xFF293126),
-              Color(0xFF1A1C20),
+              Color(0xFF0b354e),
+              Color(0xFF0b354e),
 
 
             ]

@@ -43,5 +43,9 @@ class Dimenstions {
   static double fontSize20 = screenHeight / 39.05;
   static double fontSize30 = screenHeight / 26.03;
   static double fontSize40 = screenHeight / 19.52;
+  static double fontSize45 = screenHeight / 17.34;
+  static double fontSize50 = screenHeight / 15.61;
+  static double fontSize55 = screenHeight / 13.73;
+
   static double fontSize65 = screenHeight / 12.01;
 }
