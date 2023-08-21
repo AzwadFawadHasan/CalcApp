@@ -12,8 +12,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  var firstNum;
+  var secondNum;
+  String numHistory = "";
+  String res = "";
+  late String operator;
+  String ArithName = '';
+  String allAlg = '';
+  String textDisplay = '0';
+
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: AppColor.BackgroundColor,
       body:Padding(
@@ -161,7 +172,81 @@ class _HomeScreenState extends State<HomeScreen> {
       )
     );
   }
-  void btnOnClick(text){
-    print(text);
+  void btnOnClick(String btnVal){
+    print(btnVal);
+    if(btnVal == 'C'){
+
+      numHistory = "";
+
+      textDisplay = '0';
+      firstNum= '0';
+      secondNum= '0';
+      res = "";
+
+      ArithName = '';
+      allAlg = '';
+    }else if (btnVal ==  'A/C'){
+      numHistory = "";
+
+      textDisplay = '0';
+      firstNum= '0';
+      secondNum= '0';
+      res = "";
+
+      ArithName = 'CLEAR';
+      allAlg = '';
+    }else if(
+    btnVal=='/' || btnVal =="X" || btnVal=="+" || btnVal == "--"
+        || btnVal == "%"
+    ){
+      if (btnVal=='/'){
+        ArithName= "DIVIDE";
+      }else if (btnVal=="X"){
+        ArithName = "Multiply";
+      }else if (btnVal=="+"){
+        ArithName = "ADDITION";
+      }else if (btnVal=="--"){
+        ArithName = "Subtract";
+      }else if (btnVal=="%"){
+        ArithName = "Percentage";
+      }else{
+        ArithName="";
+      }
+      firstNum = int.parse(textDisplay);
+      res = '';
+      operator=btnVal;
+
+    }
+    else if (btnVal == '='){
+      ArithName = 'EQUAL';
+      secondNum  = int.parse(textDisplay);
+      if(operator == "+"){
+        res = (firstNum+secondNum).toString();
+        numHistory = firstNum.toString()+operator.toString()+secondNum.toString();
+
+      }
+      if(operator == "--"){
+        res = (firstNum-secondNum).toString();
+        numHistory = firstNum.toString()+operator.toString()+secondNum.toString();
+
+      }
+      if(operator == "X"){
+        res = (firstNum*secondNum).toString();
+        numHistory = firstNum.toString()+operator.toString()+secondNum.toString();
+
+      }
+      if(operator == "/"){
+        res = (firstNum/secondNum).toString();
+        numHistory = firstNum.toString()+operator.toString()+secondNum.toString();
+
+      }
+      if(operator == "%"){
+        res = (firstNum+secondNum).toString();
+        numHistory = firstNum.toString()+operator.toString()+secondNum.toString();
+
+      }
+    }else{
+      res = int.parse(textDisplay+btnVal).toString();
+    }
   }
 }
