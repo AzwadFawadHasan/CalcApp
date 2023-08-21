@@ -1,5 +1,6 @@
 import 'package:calculator_app/util/colors.dart';
 import 'package:calculator_app/util/dimention.dart';
+import 'package:calculator_app/widget/button.dart';
 import 'package:calculator_app/widget/display_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -33,9 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(child: Column(
               children: [
-                
+                Button(),
+                Button()
               ],
-            )
+            ))
           ],
         ),
       )
