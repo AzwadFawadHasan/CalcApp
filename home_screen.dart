@@ -35,18 +35,125 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Button(text: 'A/C',
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Button(text: 'A/C',
+                          callBack: btnOnClick,
+
+                    ),
+                    Button(text: 'C',
+                      callBack: btnOnClick,
+                      TextColor: Colors.red,
+
+                    ),Button(text: '%',
                       callBack: btnOnClick,
 
-                ),
-                Button(text: 'C',
-                  callBack: btnOnClick,
-                  TextColor: Colors.red,
+                    ),
+                    Button(text: '/',
+                      callBack: btnOnClick,
+                      TextColor: AppColor.TextColorlight,
 
-                ),Button(text: '%',
-                  callBack: btnOnClick,
-
+                    ),
+                  ],
                 ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Button(text: '9',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: '8',
+                      callBack: btnOnClick,
+                      TextColor: Colors.red,
+
+                    ),Button(text: '7',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: 'X',
+                      callBack: btnOnClick,
+                      TextColor: AppColor.TextColorlight,
+
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Button(text: '6',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: '5',
+                      callBack: btnOnClick,
+                      TextColor: Colors.red,
+
+                    ),Button(text: '4',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: '--',
+                      callBack: btnOnClick,
+                      TextColor: AppColor.TextColorlight,
+                      textSize: Dimenstions.height25,
+
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Button(text: '3',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: '2',
+                      callBack: btnOnClick,
+                      TextColor: Colors.red,
+
+                    ),Button(text: '1',
+                      callBack: btnOnClick,
+
+                    ),
+                    Button(text: '+',
+                      callBack: btnOnClick,
+                      TextColor: AppColor.TextColorlight,
+
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: Dimenstions.width20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Button(text: '0',
+                      callBack: btnOnClick,
+
+                    ),
+                    SizedBox(
+                      width: Dimenstions.width20,
+                    ),
+                    Button(text: '.',
+                      callBack: btnOnClick,
+                      TextColor: Colors.red,
+
+                    ),
+                    SizedBox(
+                      width: Dimenstions.width20,
+                    ),Button(text: '=',
+                      callBack: btnOnClick,
+
+                    ),
+
+                  ],
+                ),
+
+
               ],
             ))
           ],
