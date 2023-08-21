@@ -5,6 +5,8 @@ class AppColor{
   static final Color boxcolors = Color(0xFFA3E764);
   // static final Color FirstBackgroundColor = Color(0xFF2A3235);
   static final Color  BackgroundColor = Color(0xFF0e2432);
+  //#0b354e
+  static final Color  BackgroundColorLighter = Color(0xFF0b354e);
   // static final Color SecondBackgroundColor1 = Color(0xFF1F2324);
   // static final Color SecondBackgroundColor2 = Color(0xFF202D31);
   // static final Color BorderColor = Color(0xFF23292D);
