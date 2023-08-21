@@ -27,10 +27,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: AppColor.BackgroundColor,
+        appBar: AppBar(
+          title: Text(
+            'Calculator', // App title
+            style: TextStyle(
+              fontSize: 20, // Adjust the font size as needed
+            ),
+          ),
+          centerTitle: true, // Center-align the title horizontally
+          backgroundColor: AppColor.BackgroundColor, // Customize the app bar color
+        ),
+
       body:Padding(
         padding: EdgeInsets.only(
-          top: Dimenstions.height20,
-          bottom: Dimenstions.height20,
+
+          top: Dimenstions.height10,
+          bottom: Dimenstions.height10,
           left: Dimenstions.width20,
           right: Dimenstions.width20,
 
