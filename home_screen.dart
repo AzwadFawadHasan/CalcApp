@@ -38,7 +38,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Column(
           children: [
-            const DisplayScreen(),
+            DisplayScreen(
+              nameAlg:allAlg,
+                numDisplay:textDisplay,
+                numHistory:numHistory,
+            ),
             SizedBox(
               height: Dimenstions.height25,
 
@@ -106,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       callBack: btnOnClick,
 
                     ),
-                    Button(text: '--',
+                    Button(text: '-',
                       callBack: btnOnClick,
                       TextColor: AppColor.TextColorlight,
                       textSize: Dimenstions.height25,
@@ -196,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ArithName = 'CLEAR';
       allAlg = '';
     }else if(
-    btnVal=='/' || btnVal =="X" || btnVal=="+" || btnVal == "--"
+    btnVal=='/' || btnVal =="X" || btnVal=="+" || btnVal == "-"
         || btnVal == "%"
     ){
       if (btnVal=='/'){
@@ -205,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ArithName = "Multiply";
       }else if (btnVal=="+"){
         ArithName = "ADDITION";
-      }else if (btnVal=="--"){
+      }else if (btnVal=="-"){
         ArithName = "Subtract";
       }else if (btnVal=="%"){
         ArithName = "Percentage";
@@ -225,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
         numHistory = firstNum.toString()+operator.toString()+secondNum.toString();
 
       }
-      if(operator == "--"){
+      if(operator == "-"){
         res = (firstNum-secondNum).toString();
         numHistory = firstNum.toString()+operator.toString()+secondNum.toString();
 
@@ -248,5 +252,10 @@ class _HomeScreenState extends State<HomeScreen> {
     }else{
       res = int.parse(textDisplay+btnVal).toString();
     }
+    setState(() {
+      textDisplay= res;
+      allAlg= ArithName;
+
+    });
   }
 }

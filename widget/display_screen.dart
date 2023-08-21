@@ -2,7 +2,10 @@ import 'package:calculator_app/util/colors.dart';
 import 'package:flutter/material.dart';
 import '../util/dimention.dart';
 class DisplayScreen extends StatelessWidget {
-  const DisplayScreen({super.key});
+  final nameAlg;
+  final numDisplay;
+  final numHistory;
+  const DisplayScreen({super.key, this.nameAlg, this.numDisplay, this.numHistory});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class DisplayScreen extends StatelessWidget {
               Container(
                 alignment: Alignment.bottomRight,
                 child: Text(
-                  '55 + 34',
+                  numHistory,
                   style: TextStyle(
                     fontFamily: 'digital',
                     fontSize: Dimenstions.fontSize30,
@@ -43,7 +46,7 @@ class DisplayScreen extends StatelessWidget {
               Container(
                 alignment: Alignment.bottomRight,
                 child: Text(
-                  '55',
+                  numDisplay,
                   style: TextStyle(
                     fontFamily: 'digital',
                     fontSize: Dimenstions.fontSize65,
@@ -64,7 +67,7 @@ class DisplayScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(bottom: Dimenstions.height10),
                     child:Text(
-                      'ADD',
+                      nameAlg,
                       style: TextStyle(
                         fontFamily: 'digital',
                         fontSize: Dimenstions.fontSize30,
