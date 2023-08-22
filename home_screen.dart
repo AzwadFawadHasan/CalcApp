@@ -25,186 +25,108 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: AppColor.BackgroundColorLighter,
-        appBar: AppBar(
-          title: Text(
-            'Calculator', // App title
-            style: TextStyle(
-              fontSize: 20, // Adjust the font size as needed
-            ),
+      appBar: AppBar(
+        title: Text(
+          'Calculator', // App title
+          style: TextStyle(
+            fontSize: 20, // Adjust the font size as needed
           ),
-          centerTitle: true, // Center-align the title horizontally
-          backgroundColor: AppColor.BackgroundColor, // Customize the app bar color
         ),
-
-      body:Padding(
+        centerTitle: true, // Center-align the title horizontally
+        backgroundColor: AppColor.BackgroundColor, // Customize the app bar color
+      ),
+      body: Padding(
         padding: EdgeInsets.only(
-
-          //top: Dimenstions.height10,
-          //bottom: Dimenstions.height10,
-          //left: Dimenstions.width20,
-          //right: Dimenstions.width20,
-
-
+          // You can uncomment the padding values if needed
+          // top: Dimenstions.height10,
+          // bottom: Dimenstions.height10,
+          // left: Dimenstions.width20,
+          // right: Dimenstions.width20,
         ),
         child: Column(
           children: [
             DisplayScreen(
-              nameAlg:allAlg,
-                numDisplay:textDisplay,
-                numHistory:numHistory,
+              nameAlg: allAlg,
+              numDisplay: textDisplay,
+              numHistory: numHistory,
             ),
             SizedBox(
               height: Dimenstions.height25,
-
             ),
-            Expanded(child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Button(text: 'V',
-                          callBack: btnOnClick,
-
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // Column for V, (, 1, 4, 7, 0
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Button(text: 'V', callBack: btnOnClick),
+                        Button(text: '(', callBack: btnOnClick),
+                        Button(text: '1', callBack: btnOnClick),
+                        Button(text: '4', callBack: btnOnClick),
+                        Button(text: '7', callBack: btnOnClick),
+                        Button(text: '0', callBack: btnOnClick),
+                      ],
                     ),
-                    Button(text: 'C',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
+                  ),
 
-                    ),Button(text: 'X',
-                      callBack: btnOnClick,
-
+                  // Column for C, ), 2, 5, 8, 00
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Button(text: 'C', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: ')', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: '2', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: '5', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: '8', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: '00', callBack: btnOnClick, TextColor: Colors.white),
+                      ],
                     ),
-                    Button(text: '/',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
+                  ),
 
+                  // Column for X, %, 3, 6, 9, .
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Button(text: 'X', callBack: btnOnClick),
+                        Button(text: '%', callBack: btnOnClick),
+                        Button(text: '3', callBack: btnOnClick),
+                        Button(text: '6', callBack: btnOnClick),
+                        Button(text: '9', callBack: btnOnClick),
+                        Button(text: '.', callBack: btnOnClick, TextColor: Colors.white),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Button(text: '(',
-                      callBack: btnOnClick,
-
+                  // Column for /, *, -, +, =
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Button(text: '/', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: '*', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: '-', callBack: btnOnClick, TextColor: Colors.white),
+                        Button(text: '+', callBack: btnOnClick, TextColor: Colors.white, textSize: Dimenstions.height25),
+                        EqualButton(text: '=', callBack: btnOnClick, TextColor: Colors.white),
+                      ],
                     ),
-                    Button(text: ')',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-
-                    ),Button(text: '%',
-                      callBack: btnOnClick,
-
-                    ),
-                    Button(text: '*',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-
-                    ),
-                  ],
-                ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Button(text: '1',
-                      callBack: btnOnClick,
-
-                    ),
-                    Button(text: '2',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-
-                    ),Button(text: '3',
-                      callBack: btnOnClick,
-
-                    ),
-                    Button(text: '-',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Button(text: '4',
-                      callBack: btnOnClick,
-
-                    ),
-                    Button(text: '5',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-
-                    ),Button(text: '6',
-                      callBack: btnOnClick,
-
-                    ),
-                    Button(text: '+',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-                      textSize: Dimenstions.height25,
-
-                    ),
-                  ],
-                ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Button(text: '7',
-                      callBack: btnOnClick,
-                    ),
-                    Button(text: '8',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-                    ),
-                    Button(text: '9',
-                      callBack: btnOnClick,
-                    ),
-                    Button(text: '',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-                      textSize: Dimenstions.height25,
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Button(text: '0',
-                      callBack: btnOnClick,
-                    ),
-                    Button(text: '00',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-                    ),
-                    Button(text: '.',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-                    ),
-                    EqualButton(text: '=',
-                      callBack: btnOnClick,
-                      TextColor: Colors.white,
-                    )
-                  ],
-                ),
-
-
-              ],
-            ))
+                  ),
+                ],
+              ),
+            )
           ],
         ),
-      )
+      ),
     );
   }
+
+
   void btnOnClick(String btnVal){
     print(btnVal);
     if(btnVal == 'C'){

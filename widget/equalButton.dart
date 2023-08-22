@@ -19,8 +19,8 @@ class EqualButton extends StatelessWidget {
         print("button has been tapped ${text}");
       },
       child: Container(
-        height: Dimenstions.height120,
-        width: Dimenstions.height75,
+        height: Dimenstions.height150,
+        width: Dimenstions.height100,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.zero,
             color: AppColor.BackgroundColorLighter,
