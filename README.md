@@ -6,7 +6,9 @@ this repo contains a basic Calculator Application
 - copy and paste the contents of this repo into the "lib" folder
 - run it using android studio
 
-# picture of my calculator app
-![image](https://github.com/AzwadFawadHasan/CalcApp/assets/106096161/b93c6816-f000-4828-af48-a294bc7f8e3c)
+# picture of my calculator app:
+![image](https://github.com/AzwadFawadHasan/CalcApp/assets/106096161/ee4f957b-8520-4cd8-9635-12cfc4009ae4)
 
-![image](https://github.com/AzwadFawadHasan/CalcApp/assets/106096161/448ea040-8350-47e9-a695-944f607cdfd8)
+
+![image](https://github.com/AzwadFawadHasan/CalcApp/assets/106096161/33ae47e0-e53f-479c-802d-7a2fded460df)
+
