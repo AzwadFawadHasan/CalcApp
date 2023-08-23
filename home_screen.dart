@@ -103,7 +103,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-
+                  SizedBox(
+                    height: Dimenstions.height65,
+                  ),
                   // Column for /, *, -, +, =
                   Expanded(
                     child: Column(
@@ -113,6 +115,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         Button(text: '*', callBack: btnOnClick, TextColor: Colors.white),
                         Button(text: '-', callBack: btnOnClick, TextColor: Colors.white),
                         Button(text: '+', callBack: btnOnClick, TextColor: Colors.white, textSize: Dimenstions.height25),
+                        SizedBox(
+                          height: Dimenstions.height50,
+                        ),
                         EqualButton(text: '=', callBack: btnOnClick, TextColor: Colors.white),
                       ],
                     ),
