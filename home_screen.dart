@@ -52,9 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
               numDisplay: textDisplay,
               numHistory: numHistory,
             ),
-            SizedBox(
-              height: Dimenstions.height25,
-            ),
+            // SizedBox(
+            //   height: Dimenstions.height25,
+            // ),
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,20 +103,30 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: Dimenstions.height65,
-                  ),
+
                   // Column for /, *, -, +, =
                   Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        SizedBox(
+                          height: Dimenstions.height10,
+                        ),
                         Button(text: '/', callBack: btnOnClick, TextColor: Colors.white),
+                        SizedBox(
+                          height: Dimenstions.height30,
+                        ),
                         Button(text: '*', callBack: btnOnClick, TextColor: Colors.white),
+                        SizedBox(
+                          height: Dimenstions.height10,
+                        ),
                         Button(text: '-', callBack: btnOnClick, TextColor: Colors.white),
+                        SizedBox(
+                          height: Dimenstions.height15,
+                        ),
                         Button(text: '+', callBack: btnOnClick, TextColor: Colors.white, textSize: Dimenstions.height25),
                         SizedBox(
-                          height: Dimenstions.height50,
+                          height: Dimenstions.height15,
                         ),
                         EqualButton(text: '=', callBack: btnOnClick, TextColor: Colors.white),
                       ],
